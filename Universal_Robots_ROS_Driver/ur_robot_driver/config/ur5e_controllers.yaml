@@ -125,7 +125,7 @@ vel_joint_traj_controller:
    state_publish_rate: *loop_hz
    action_monitor_rate: 20
 
-my_cartesian_motion_controller:
+cartesian_motion_controller:
     type: "position_controllers/CartesianMotionController"
     end_effector_link: "tool0"
     robot_base_link: "base_link"
@@ -146,7 +146,7 @@ my_cartesian_motion_controller:
         rot_y: {p: 1.0}
         rot_z: {p: 1.0}
 
-my_cartesian_force_controller:
+cartesian_force_controller:
     type: "position_controllers/CartesianForceController"
     end_effector_link: "tool0"
     robot_base_link: "base_link"
@@ -167,7 +167,7 @@ my_cartesian_force_controller:
         rot_y: {p: 0.01}
         rot_z: {p: 0.01}
 
-my_cartesian_compliance_controller:
+cartesian_compliance_controller:
     type: "position_controllers/CartesianComplianceController"
     end_effector_link: "tool0"    # All links below must come before this link
     robot_base_link: "base_link"
@@ -198,7 +198,7 @@ my_cartesian_compliance_controller:
         rot_y: {p: 0.01}
         rot_z: {p: 0.01}
 
-my_motion_control_handle:
+motion_control_handle:
    type: "cartesian_controllers/MotionControlHandle"
    end_effector_link: "tool0"
    robot_base_link: "base_link"
@@ -211,7 +211,7 @@ my_motion_control_handle:
       - wrist_2_joint
       - wrist_3_joint
 
-my_joint_to_cartesian_controller:
+joint_to_cartesian_controller:
     type: "cartesian_controllers/JointControllerAdapter"
     end_effector_link: "tool0"
     robot_base_link: "base_link"
@@ -224,7 +224,7 @@ my_joint_to_cartesian_controller:
       - wrist_2_joint
       - wrist_3_joint
 
-my_joint_to_cartesian_controller/joint_trajectory_controller:
+joint_to_cartesian_controller/joint_trajectory_controller:
     type: "position_controllers/JointTrajectoryController"
     joints:
       - shoulder_pan_joint

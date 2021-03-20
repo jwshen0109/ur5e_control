@@ -36,6 +36,7 @@
   <depend>tf2_geometry_msgs</depend>
   <depend>trajectory_msgs</depend>
   <depend>ur_controllers</depend>
+  <depend>cartesian_controllers</depend>
   <depend>ur_dashboard_msgs</depend>
   <depend>ur_client_library</depend>
   <depend>ur_msgs</depend>
