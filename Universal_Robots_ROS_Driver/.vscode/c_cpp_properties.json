@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/jwshen/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/cartesian_compliance_controller/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/cartesian_controller_base/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/cartesian_controller_handles/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/cartesian_force_controller/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/cartesian_motion_controller/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/cartesian_controllers/joint_to_cartesian_controller/include/**",
+        "/home/jwshen/catkin_ws/src/ur5e_control/sigma7/include/**",
+        "/home/jwshen/catkin_ws/src/ur5e_control/sigma_client/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/ur_controllers/include/**",
+        "/home/jwshen/catkin_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
