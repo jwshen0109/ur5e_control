@@ -87,11 +87,6 @@ int SigmaDevice::CalibrateDevice() {
         dhdSleep(2.0);
     }
 
-    
-    // center of workspace
-    double nullPose[DHD_MAX_DOF] = { 0.0, 0.0, 0.0, //base  (translations)
-    	                             0.0, 0.0, 0.0, //wrist (rotations)
-    	                             0.0 };         //gripper
     //move to center
     drdMoveTo (nullPose);
 
@@ -229,3 +224,38 @@ void SigmaDevice::setForceAndTorque(){
     }
 }
 
+void SigmaDevice::resetAll(){
+    drdRegulatePos  (true);
+    drdRegulateRot  (true);
+    drdRegulateGrip (true);
+    drdStart();
+    drdMoveTo (nullPose);
+    drdStop(true);
+}
+
+void SigmaDevice::resetAll(){
+    drdRegulatePos  (true);
+    drdRegulateRot  (false);
+    drdRegulateGrip (false);
+    drdStart();
+    drdMoveToPos (0.0, 0.0, 0.0);
+    drdStop(true);
+}
+
+void SigmaDevice::resetAll(){
+    drdRegulatePos  (false);
+    drdRegulateRot  (true);
+    drdRegulateGrip (false);
+    drdStart();
+    drdMoveToRot (0.0, 0.0, 0.0);
+    drdStop(true);
+}
+
+void SigmaDevice::resetAll(){
+    drdRegulatePos  (false);
+    drdRegulateRot  (false);
+    drdRegulateGrip (true);
+    drdStart();
+    drdMoveToGrip (0.0);
+    drdStop(true);
+}

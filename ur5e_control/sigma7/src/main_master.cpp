@@ -58,6 +58,8 @@ int main(int argc, char** argv) {
 
     ROS_INFO("Initialization done.");
 
+    ROS_INFO(" press 'c' to resetAll.\n press 'p' to resetPosition.\n press 'r' to resetOriention.\n press 'g' to resetGrip.\n");
+
     while (ros::ok()) {
 
         // Reading Sigma measurements and setting the force
@@ -71,9 +73,25 @@ int main(int argc, char** argv) {
             //sigma[i]->HandleWrench();
             sigma[i]->setForceAndTorque();
 
-            
-
+            //keyboard input to reset
+            if (dhdKbHit ()) {
+                switch (dhdKbGet ()) {
+                    case 'c':
+                        sigma[i] -> resetAll();
+                        break;
+                    case 'p':
+                        sigma[i] -> resetPosition();
+                        break;
+                    case 'r':
+                        sigma[i] -> resetOriention();
+                        break;
+                    case 'g':
+                        sigma[i] -> resetGrip();
+                        break;
+                }
+            }
         }
+    
         ros::spinOnce();
         loop_rate.sleep();
     }

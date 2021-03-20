@@ -41,6 +41,18 @@ public:
     void HandleWrench();
 
     void setForceAndTorque();
+
+    void resetAll();
+
+    void resetPosition();
+
+    void resetOriention();
+
+    void resetGrip();
+
+    double nullPose[DHD_MAX_DOF] = { 0.0, 0.0, 0.0,  // base  (translations)
+                                     0.0, 0.0, 0.0,  // wrist (rotations)
+                                     0.0 };
     
 private:
 
