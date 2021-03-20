@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<robot name="ur5e" xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:include filename="$(find ur_e_description)/urdf/ur5e.urdf.xacro" />
+
+  <link name="world"/>
+
+ <xacro:ur5e_robot prefix="" joint_limited="true"/>
+
+  <joint name="world_to_robot" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+</robot>

@@ -1,0 +1,7 @@
+<launch>
+	<node name="sigma_vision" pkg="sigma_client" type="sigma_vision" output="screen"/>
+
+	<node name="sigma_client" pkg="sigma_client" type="sigma_client" output="screen">
+        <param name="base_frame" value="world"/>
+</node>
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+  <!--include file="$(find atur5_moveit_config)/launch/myworkcell_planning_execution.launch"/-->
+  <include file="$(find myrobot2_moveit_config)/launch/myrobot2_moveit_planning_execution.launch"/>
+  <node name="sigma_vision" pkg="sigma_client" type="sigma_vision" output="screen" />
+  <!-- <node name="descartes_node" type="descartes_node" pkg="apriltags2_node" output="screen"/> -->
+</launch>
