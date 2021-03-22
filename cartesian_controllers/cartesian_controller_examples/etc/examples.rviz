@@ -60,17 +60,17 @@ Visualization Manager:
         All Enabled: false
         base_link:
           Value: true
-        link1:
+        shoulder_pan_joint:
           Value: true
-        link2:
+        shoulder_lift_joint:
           Value: true
-        link3:
+        elbow_joint:
           Value: true
-        link4:
+        wrist_1_joint:
           Value: true
-        link5:
+        wrist_2_joint:
           Value: true
-        link6:
+        wrist_3_joint:
           Value: true
         sensor_link:
           Value: false
@@ -86,12 +86,12 @@ Visualization Manager:
       Tree:
         world:
           base_link:
-            link1:
-              link2:
-                link3:
-                  link4:
-                    link5:
-                      link6:
+            shoulder_pan_joint:
+              shoulder_lift_joint:
+                elbow_joint:
+                  wrist_1_joint:
+                    wrist_2_joint:
+                      wrist_3_joint:
                         sensor_link:
                           {}
                         tool0:
@@ -113,32 +113,32 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        link1:
+        shoulder_pan_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link2:
+        shoulder_lift_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link3:
+        elbow_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link4:
+        wrist_1_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link5:
+        wrist_2_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link6:
+        wrist_3_joint:
           Alpha: 1
           Show Axes: false
           Show Trail: false

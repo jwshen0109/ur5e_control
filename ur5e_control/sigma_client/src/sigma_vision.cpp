@@ -29,32 +29,7 @@ public:
      
       res.pose = p->pose;
       return true;
-      //tf::Transform master2slaveReachVec;
-      //master2slaveReachVec.setOrigin(0,0,1.0);
-      //tf::Transform ur_to_target = master2slaveReachVec * (p->transforms[0].transform);
-
-      // tf::Transform world_to_target;
-      // tf::transformMsgToTF(p->transforms[0].transform, world_to_target);
-      // tf::StampedTransform ts;
-      // try{
-      //   ros::Time now = ros::Time::now();
-      //   listener_.waitForTransform(req.base_frame, p->transforms[0].header.frame_id, 
-      //                         now, ros::Duration(1.0));
-      //   listener_.lookupTransform(req.base_frame, p->transforms[0].header.frame_id,
-      //                        now, ts);
-      //       }
-      //  catch (tf::TransformException &ex) {
-      // 	   ROS_ERROR("%s",ex.what());
-      // 	   ros::Duration(1.0).sleep();
-      // 	   //continue;
-      // }
-      // //对象姿势转换为目标帧,定义存放转换信息（平移，转动）的变量
-      // tf::Transform ur_to_target;
-      // ur_to_target = ts * world_to_target;
-      //在服务响应中返回转换后的姿势
-      //tf::poseTFToMsg(ur_to_target, res.pose);
-
-      //return true;
+  
   }
   void number_callback(const geometry_msgs::PoseStamped::ConstPtr& msg)
   {

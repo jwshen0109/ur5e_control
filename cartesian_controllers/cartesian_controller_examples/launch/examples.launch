@@ -1,7 +1,7 @@
 <launch>
         <!-- Load robot_description to parameter server -->
         <param name="/robot_description"
-        command="$(find xacro)/xacro --inorder '$(find cartesian_controller_examples)/urdf/robot.urdf.xacro'" />
+        command="$(find xacro)/xacro --inorder '$(find ur_e_description)/urdf/ur5e_robot.urdf.xacro'" />
 
         <!-- Load hardware configuration -->
         <rosparam file="$(find cartesian_controller_examples)/config/example_hw_config.yaml" command="load"></rosparam>
@@ -20,7 +20,7 @@
         <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" args="joint_state_controller" respawn="false" output="screen"/>
 
         <!-- Load controller configuration -->
-        <rosparam file="$(find cartesian_controller_examples)/config/example_controllers.yaml" command="load"></rosparam>
+        <rosparam file="$(find cartesian_controller_examples)/config/ur5e_controllers.yaml" command="load"></rosparam>
 
         <!-- Spawn controllers -->
         <node name="controller_spawner" pkg="controller_manager" type="spawner"

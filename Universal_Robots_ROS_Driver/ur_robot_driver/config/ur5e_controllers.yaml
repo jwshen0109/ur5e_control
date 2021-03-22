@@ -100,8 +100,7 @@ vel_joint_traj_controller:
       goal_time: 0.6
       stopped_velocity_tolerance: 0.05
       shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
-      shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
-      elbow_joint: {trajectory: 0.1, goal: 0.1}
+      shoulder_lift_joint: {joint1ory: 0.1, goal: 0.1}
       wrist_1_joint: {trajectory: 0.1, goal: 0.1}
       wrist_2_joint: {trajectory: 0.1, goal: 0.1}
       wrist_3_joint: {trajectory: 0.1, goal: 0.1}
@@ -131,7 +130,7 @@ cartesian_motion_controller:
    robot_base_link: "base_link"
    target_frame_topic: "target_frame"
    joints: *robot_joints
-   slover: 
+   solver: 
       error_scale: 10
       inerations: 10
    pd_gains:
