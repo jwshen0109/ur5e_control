@@ -27,7 +27,7 @@ find_package(catkin REQUIRED
     ur_controllers
     ur_dashboard_msgs
     ur_msgs
-    cartesian_controllers
+    #cartesian_motion_controllers
 )
 find_package(Boost REQUIRED)
 find_package(ur_client_library REQUIRED)
@@ -51,7 +51,7 @@ catkin_package(
     tf2_msgs
     trajectory_msgs
     ur_controllers
-    cartesian_controllers
+    #cartesian_motion_controllers
     ur_dashboard_msgs
     ur_msgs
     std_srvs

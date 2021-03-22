@@ -233,7 +233,7 @@ void SigmaDevice::resetAll(){
     drdStop(true);
 }
 
-void SigmaDevice::resetAll(){
+void SigmaDevice::resetPosition(){
     drdRegulatePos  (true);
     drdRegulateRot  (false);
     drdRegulateGrip (false);
@@ -242,7 +242,7 @@ void SigmaDevice::resetAll(){
     drdStop(true);
 }
 
-void SigmaDevice::resetAll(){
+void SigmaDevice::resetOriention(){
     drdRegulatePos  (false);
     drdRegulateRot  (true);
     drdRegulateGrip (false);
@@ -251,7 +251,7 @@ void SigmaDevice::resetAll(){
     drdStop(true);
 }
 
-void SigmaDevice::resetAll(){
+void SigmaDevice::resetGrip(){
     drdRegulatePos  (false);
     drdRegulateRot  (false);
     drdRegulateGrip (true);
